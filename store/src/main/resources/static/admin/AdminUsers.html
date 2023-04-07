@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--360浏览器H5兼容设置-->
+    <meta name="renderer" content="webkit"/>
+    <title>二手市场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--导入核心文件-->
+    <script src="../bootstrap3/js/holder.js"></script>
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/order.css"/>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">
+    <!--电脑商城logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <a href="users.html">
+                <img src="../images/index/stumalllogo.png"/>
+            </a>
+        </div>
+        <!--快捷选项-->
+        <div class="col-md-9 top-item">
+            <ul class="list-inline pull-right">
+                <li>
+                    <!--下列列表按钮 ：管理-->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span
+                                    class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                            <li><a href="orders.html">用户管理</a></li>
+                            <li><a href="../web/userdata.html">商品管理</a></li>
+                            <li><a href="../web/upload.html">修改密码</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-split">|</li>
+                <li><span class="fa fa-user"></span></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li class="active"><a href="users.html"><span class="fa fa-home"></span></a></li>
+
+        </ul>
+    </div>
+
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<div class="container">
+    <div class="col-md-2">
+        <!--左侧导航开始-->
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：我的订单-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">管理模块</a>
+                    </p>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div><a href="users.html"><b>用户信息</b></a></div>
+                        <div><a href="orders.html">订单信息</a></div>
+                        <div><a href="Product.html">商品信息</a></div>
+                        <div><a href="Increased.html">增加商品</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：资料修改-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">个人信息</a>
+                    </p>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div><a href="AdminPassword.html"><b>修改密码</b></a></div>
+                        <div><a href="AdminUsers.html">个人资料</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左侧导航结束-->
+    <div class="col-md-10	">
+        <div class="panel panel-default">
+            <ul class="nav nav-tabs">
+                <li><a href="AdminPassword.html">修改密码</a></li>
+                <li class="active"><a href="#">个人资料</a></li>
+            </ul>
+            <div class="panel-body">
+                <!--修改资料表单开始-->
+                <form id="form-change-info" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">用户名：</label>
+                        <div class="col-md-8">
+                            <input id="username" type="text" class="form-control" value="孙悟空" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">电话号码：</label>
+                        <div class="col-md-8">
+                            <input id="phone" name="phone" type="text" class="form-control" placeholder="请输入电话号码" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">电子邮箱：</label>
+                        <div class="col-md-8">
+                            <input id="email" name="email" type="text" class="form-control" placeholder="请输入电子邮箱" value="sunwk@qq.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">性别：</label>
+                        <div class="col-md-8">
+                            <label class="radio-inline">
+                                <input id="gender-male" type="radio" name="gender" value="1">男
+                            </label>
+                            <label class="radio-inline">
+                                <input id="gender-female" type="radio" name="gender" value="0">女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input id="btn-change-info" type="button" class="btn btn-primary" value="修改" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+    <!--联系我们、下载客户端等-->
+    <div class="container beforeBottom">
+        <div class="col-md-offset-1 col-md-3">
+            <div><img src="../images/index/stumalllogo.png" alt="" class="footLogo"/></div>
+        </div>
+        <div class="col-md-4 callus text-center">
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>商家帮助</p>
+                        </a>
+                    </li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">商家后台</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>关于我们</p>
+                        </a>
+                    </li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>
+                        <span class="fa fa-wechat"></span>
+                        <span class="fa fa-weibo"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-6">
+                <img src="../images/index/erweima.png">
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        Copyright © 2023  <a target="_blank" href="##">刘世杰</a>
+        版权所有
+    </div>
+</footer>
+<!--页脚结束-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.ajax({
+            url: "/admins/get_by_uid",
+            type: "GET",
+            dataType: "json",
+            success: function(json) {
+                if (json.state == 200) {
+                    console.log("username=" + json.data.username);
+                    console.log("phone=" + json.data.phone);
+                    console.log("email=" + json.data.email);
+                    console.log("gender=" + json.data.gender);
+
+                    $("#username").val(json.data.username);
+                    $("#phone").val(json.data.phone);
+                    $("#email").val(json.data.email);
+
+                    let radio = json.data.gender == 0 ? $("#gender-female") : $("#gender-male");
+                    radio.prop("checked", "checked");
+                } else {
+                    alert("获取用户信息失败！" + json.message);
+                }
+            },
+            error: function (xhr){
+                alert("查询用户信息产生未知异常" +xhr.message)
+            }
+        });
+    });
+
+    $("#btn-change-info").click(function() {
+        $.ajax({
+            url: "/admins/change_info",
+            type: "POST",
+            data: $("#form-change-info").serialize(),
+            dataType: "json",
+            success: function(json) {
+                if (json.state == 200) {
+                    alert("修改成功！");
+                    location.href = "AdminUsers.html";
+                } else {
+                    alert("修改失败！" + json.message);
+                }
+            },
+            error: function(xhr) {
+                alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + xhr.status);
+                location.href = "login.html";
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

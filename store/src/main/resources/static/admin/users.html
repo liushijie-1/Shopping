@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--360浏览器H5兼容设置-->
+    <meta name="renderer" content="webkit"/>
+    <title>二手市场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--导入核心文件-->
+    <script src="../bootstrap3/js/holder.js"></script>
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/order.css"/>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">
+    <!--电脑商城logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <a href="users.html">
+                <img src="../images/index/stumalllogo.png"/>
+            </a>
+        </div>
+        <!--快捷选项-->
+        <div class="col-md-9 top-item">
+            <ul class="list-inline pull-right">
+                <li>
+                    <!--下列列表按钮 ：管理-->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span
+                                    class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                            <li><a href="users.html">用户管理</a></li>
+                            <li><a href="Product.html">商品管理</a></li>
+                            <li><a href="AdminPassword.html">修改密码</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-split">|</li>
+                <li><span class="fa fa-user"></span></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li class="active"><a href="users.html"><span class="fa fa-home"></span></a></li>
+
+        </ul>
+    </div>
+
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<div class="container">
+    <div class="col-md-2">
+        <!--左侧导航开始-->
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：我的订单-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">管理模块</a>
+                    </p>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div><a href="users.html"><b>用户信息</b></a></div>
+                        <div><a href="orders.html">订单信息</a></div>
+                        <div><a href="Product.html">商品信息</a></div>
+                        <div><a href="Increased.html">增加商品</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：资料修改-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">个人信息</a>
+                    </p>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div><a href="AdminPassword.html"><b>修改密码</b></a></div>
+                        <div><a href="AdminUsers.html">个人资料</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左侧导航结束-->
+    <div class="col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="orders-table" width="100%">
+                    <thead>
+                    <tr>
+                        <th width="5%"></th>
+                        <th width="5%">姓名</th>
+                        <th width="15%">联系方式</th>
+                        <th width="10%">省份</th>
+                        <th width="10%">城市</th>
+                        <th width="20%">地址</th>
+                        <th width="10%">密码</th>
+                        <th width="20%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="user-list" class="orders-body">
+                    <tr>
+                        <td>1</td>
+                        <td>张三</td>
+                        <td>13603446911</td>
+                        <td>江西</td>
+                        <td>九江</td>
+                        <td>共青城市</td>
+                        <td>111</td>
+                        <td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>
+                        <td><a class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+    <!--联系我们、下载客户端等-->
+    <div class="container beforeBottom">
+        <div class="col-md-offset-1 col-md-3">
+            <div><img src="../images/index/stumalllogo.png" alt="" class="footLogo"/></div>
+        </div>
+        <div class="col-md-4 callus text-center">
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>商家帮助</p>
+                        </a>
+                    </li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">商家后台</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>关于我们</p>
+                        </a>
+                    </li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>
+                        <span class="fa fa-wechat"></span>
+                        <span class="fa fa-weibo"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-6">
+                <img src="../images/index/erweima.png">
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        Copyright © 2023 <a target="_blank" href="##">刘世杰</a>
+        版权所有
+    </div>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        UserList();
+    })
+
+    function UserList(){
+        $.ajax({
+            url: "/admins/selectUser",
+            type: "get",
+            dataType: "json",
+            success: function (json) {
+                let list = json.data;
+                for (let i = 0; i < list.length; i++) {
+                    let order = '<tr>\n' +
+                        '<td>#{number}</td>\n' +
+                        '<td>#{username}</td>\n' +
+                        '<td>#{phone}</td>\n' +
+                        '<td>#{provinceName}</td>\n' +
+                        '<td>#{cityName}</td>\n' +
+                        '<td>#{areaName}</td>\n' +
+                        '<td>#{zip}</td>\n' +
+                        '<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>\n'+
+                        '<td><a onclick="deleteByUid(#{uid})" class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>\n'+
+                        '</tr>';
+
+                    order = order.replace("#{uid}" ,list[i].uid)
+                    order = order.replace("#{number}",(i+1));
+                    order = order.replace("#{username}", list[i].username);
+                    order = order.replace("#{phone}", list[i].phone);
+                    order = order.replace("#{provinceName}", list[i].provinceName);
+                    order = order.replace("#{cityName}", list[i].cityName);
+                    order = order.replace("#{areaName}", list[i].areaName);
+                    order = order.replaceAll("#{zip}", list[i].zip);
+
+                    $("#user-list").append(order);
+                }
+            }
+        });
+    }
+
+    function deleteByUid(uid){
+        $.ajax({
+            url: "/admins/"+uid+"/delete",
+            type: "POST",
+            dataType: "json",
+            success: function(json) {
+                if (json.state == 200) {
+                    alert("删除成功");
+                    location.href = "users.html";
+                } else {
+                    alert("删除失败 ！" + json.message);
+                }
+            },
+            error:function (xhr){
+                alert("登录时产生未知的异常"+xhr.message);
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lsj.mapper.AdminUserMapper">
+    <resultMap id="CartEntityMap" type="com.lsj.vo.UserVO">
+        <id column="uid" property="uid"/>
+        <result column="province_name" property="provinceName"/>
+        <result column="city_name" property="cityName"/>
+        <result column="area_name" property="areaName"/>
+    </resultMap>
+
+    <!--根据UID来修改用户信息-->
+    <update id="updateInfoByUid">
+        update t_admin
+        set
+        <if test="phone!=null">phone = #{phone},</if>
+        <if test="email!=null">email = #{email},</if>
+        <if test="gender!=null">gender = #{gender},</if>
+        modified_user = #{modifiedUser},
+        modified_time = #{modifiedTime}
+        where uid = #{uid}
+    </update>
+
+    <!--修改密码-->
+    <update id="updatePasswordByUid">
+        update t_admin
+        set password      = #{password},
+            modified_user = #{modifiedUser},
+            modified_time = #{modifiedTime}
+        where uid = #{uid}
+    </update>
+
+    <select id="findByUserName" resultType="com.lsj.domain.AdminUser">
+        select *
+        from t_admin
+        where username = #{username};
+    </select>
+    <select id="selectAll" resultType="com.lsj.vo.UserVO">
+        select *
+        from t_user;
+    </select>
+
+    <select id="selectByUid" resultType="com.lsj.domain.Address">
+        select *
+        from t_address
+        where uid = #{uid}
+          and is_default = 1
+    </select>
+
+    <delete id="delByUid">
+        delete
+        from t_user
+        where uid = #{uid};
+    </delete>
+
+    <select id="select" resultType="com.lsj.domain.OrderItem">
+        select *
+        from t_order_item;
+    </select>
+
+    <!--查看管理员消息-->
+    <select id="selectById" resultType="com.lsj.domain.AdminUser">
+        select *
+        from t_admin
+        where uid = #{uid};
+    </select>
+
+</mapper>
